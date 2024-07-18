@@ -1,25 +1,26 @@
 {
     "format_version": 2,
-    "tooth": "my-plugin",
-    "version": "0.0.0",
+    "tooth": "github.com/zimuya4153/Mute",
+    "version": "1.0.0",
     "info": {
-        "name": "My Plugin Name",
-        "description": "My Plugin Description",
-        "author": "My Name",
+        "name": "Mute - 禁言插件",
+        "description": "禁言玩家插件",
+        "source": "github.com/zimuya4153/Mute",
+        "author": "小小的子沐呀",
         "tags": [
             "levilamina",
-            "plugin"
+            "mute"
         ]
     },
-    "asset_url": "My Asset Url",
-    "prerequisites": {
-        "github.com/LiteLDev/LeviLamina": "My LeviLamina Dependency Version"
+    "asset_url": "https://github.com/zimuya4153/Mute/releases/download/v1.0.0/Mute-windows-x64.zip",
+    "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "0.13.x"
     },
     "files": {
         "place": [
             {
-                "src": "my-plugin/*",
-                "dest": "plugins/my-plugin/"
+                "src": "Mute/*",
+                "dest": "plugins/Mute"
             }
         ]
     }

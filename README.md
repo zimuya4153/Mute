@@ -1,35 +1,37 @@
-# LeviLamina Plugin Template
+# Mute - 禁言插件
 
-A LeviLamina plugin template
+## 简介
+Mute 是一个用于 Minecraft 服务器的禁言插件，它可以帮助你管理服务器的禁言功能。你可以使用这个插件来禁言玩家、解除禁言操作。
+> 温馨提示：兼容LSE的所有聊天插件
 
-This plugin is a template for developing LeviLamina plugins.
+## 命令
+- `/mute all <时间>` - 全体禁言/解禁
+- `/mute player <玩家> <时间>` - 禁言玩家/解禁
+> 时间填0为解除禁言 填负数则永久禁言 禁言时间单位是秒   
 
-## Install
+`别问我为什么不弄 类似xp命令那样的L后缀 和 把禁用命令加上指令，我懒(小声逼逼)`
 
-Generate a new repository from this template.
+## 配置文件(config.json)
+```json
+{
+    "version": 1, // 配置文件版本(勿动)
+    "all": 0, // 全体禁言时间(请用指令操作)
+    "players": {}, // 玩家禁言时间(请用指令操作)
+    "disabledCmd": [ // 禁言时禁止使用的指令
+        "me",
+        "msg",
+        "tell",
+        "w"
+    ]
+}
+```
 
-## Usage
+## 安装方法
 
-Before using this plugin template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
-
-1. Clone the new repository into a local folder.
-
-1. Change the plugin name and the expected LeviLamina version in `xmake.lua`.
-
-1. Add your code.
-
-1. Run `xmake repo -u` in the root of the repository.
-
-1. Run `xmake` to build the plugin.
-
-Now the build is complete at `bin/`.
-
-## Contributing
-
-Ask questions by creating an issue.
-
-PRs accepted.
-
-## License
-
-CC0-1.0 © LiteLDev
+- 手动安装
+  - 前往[Releases](https://github.com/zimuya4153/Mute/releases)下载最新版本的`Mute-windows-x64.zip`
+  - 解压`压缩包内的`文件夹到`./plugins/`目录
+- Lip 安装
+  - 输入命令`lip install -y github.com/zimuya4153/Mute`
+- ~~一条龙安装~~
+  - ~~去 Q 群，喊人，帮你安装~~

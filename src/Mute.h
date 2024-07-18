@@ -1,15 +1,16 @@
 #pragma once
 
-#include "ll/api/plugin/NativePlugin.h"
+#include <ll/api/plugin/NativePlugin.h>
+#include <ll/api/i18n/I18n.h>
 
-namespace my_plugin {
+namespace Mute {
 
-class MyPlugin {
+class mute {
 
 public:
-    static MyPlugin& getInstance();
+    static mute& getInstance();
 
-    MyPlugin(ll::plugin::NativePlugin& self) : mSelf(self) {}
+    mute(ll::plugin::NativePlugin& self) : mSelf(self) {}
 
     [[nodiscard]] ll::plugin::NativePlugin& getSelf() const { return mSelf; }
 
@@ -24,10 +25,10 @@ public:
 
     // TODO: Implement this method if you need to unload the plugin.
     // /// @return True if the plugin is unloaded successfully.
-    // bool unload();
+    bool unload();
 
 private:
     ll::plugin::NativePlugin& mSelf;
 };
 
-} // namespace my_plugin
+} // namespace Mute
